@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\GitHub\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj",
+      "projectPath": "D:\\GitHub\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Gary\\.nuget\\packages\\",
-      "outputPath": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Domain\\obj\\",
+      "outputPath": "D:\\GitHub\\dockerdemo\\DockerDemo\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

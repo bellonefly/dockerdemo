@@ -10,3 +10,15 @@ D:\Bitbucket\Profile\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Servi
 D:\Bitbucket\Profile\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Domain.dll
 D:\Bitbucket\Profile\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Domain.pdb
 D:\Bitbucket\Profile\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.csproj.CopyComplete
+D:\GitHub\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Service.deps.json
+D:\GitHub\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Service.dll
+D:\GitHub\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Service.pdb
+D:\GitHub\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Domain.dll
+D:\GitHub\dockerdemo\DockerDemo\Service\bin\Debug\netcoreapp2.2\Domain.pdb
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.csprojAssemblyReference.cache
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.csproj.CoreCompileInputs.cache
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.AssemblyInfoInputs.cache
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.AssemblyInfo.cs
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.csproj.CopyComplete
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.dll
+D:\GitHub\dockerdemo\DockerDemo\Service\obj\Debug\netcoreapp2.2\Service.pdb

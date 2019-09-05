@@ -708,11 +708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Service\\Service.csproj",
+      "projectUniqueName": "D:\\GitHub\\dockerdemo\\DockerDemo\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Service\\Service.csproj",
+      "projectPath": "D:\\GitHub\\dockerdemo\\DockerDemo\\Service\\Service.csproj",
       "packagesPath": "C:\\Users\\Gary\\.nuget\\packages\\",
-      "outputPath": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Service\\obj\\",
+      "outputPath": "D:\\GitHub\\dockerdemo\\DockerDemo\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -731,8 +731,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Bitbucket\\Profile\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj"
+            "D:\\GitHub\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\GitHub\\dockerdemo\\DockerDemo\\Domain\\Domain.csproj"
             }
           }
         }
