@@ -1,0 +1,9 @@
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\bin\Debug\netcoreapp2.2\Domain.deps.json
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\bin\Debug\netcoreapp2.2\Domain.dll
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\obj\Debug\netcoreapp2.2\Domain.dll
+D:\Bitbucket\Profile\dockerdemo\DockerDemo\Domain\obj\Debug\netcoreapp2.2\Domain.pdb

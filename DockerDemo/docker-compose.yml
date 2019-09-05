@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  backstageapi:    
+    build: 
+      context: .
+      dockerfile: FrontStage.API/Dockerfile
+    ports:
+      - "8301:80"
+      #- "8102:22"   
+    environment:
+      ASPNETCORE_ENVIRONMENT: Release
+  backstageweb:
+    build: 
+      context: .
+      dockerfile: FrontStage.Web/Dockerfile
+      args:
+        - env=build
+    ports:
+      - "8401:80"
