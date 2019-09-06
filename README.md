@@ -14,9 +14,11 @@ http://127.0.0.1:8301
 前端：
 
 docker build --build-arg env=build -t dockerdemo_backstageweb -f FrontStage.Web/Dockerfile .
+
 docker run -d -p 8401:80 --name=dockerdemo_backstageweb_1 dockerdemo_backstageweb
 
 後端：
 
 docker build -t dockerdemo_backstageapi -f FrontStage.API/Dockerfile .
+
 docker run -d -p 8301:80 --env ASPNETCORE_ENVIRONMENT=Release --name=dockerdemo_backstageapi_1 dockerdemo_backstageapi
