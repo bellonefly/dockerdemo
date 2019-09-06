@@ -16,12 +16,12 @@ RUN apt-get install -y vim
 
 # »·ºÝ°»¿ù¥Î
 #WORKDIR /
-#RUN mkdir /var/run/sshd
-#RUN echo 'root:password' | chpasswd
-#RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-#RUN service ssh restart
-#RUN /usr/sbin/sshd
-#RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v vs2017u5 -l /root/.vs-debugger/
+RUN mkdir /var/run/sshd
+RUN echo 'root:password' | chpasswd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN service ssh restart
+RUN /usr/sbin/sshd
+RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v vs2017u5 -l /root/.vs-debugger/
 
 # «Ø¸m
 FROM microsoft/dotnet:2.2-sdk AS build

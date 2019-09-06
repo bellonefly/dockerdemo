@@ -7,7 +7,7 @@ services:
       dockerfile: FrontStage.API/Dockerfile
     ports:
       - "8301:80"
-      #- "8102:22"   
+      - "8302:22"   
     environment:
       ASPNETCORE_ENVIRONMENT: Release
   backstageweb:
