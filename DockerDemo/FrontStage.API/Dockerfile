@@ -15,7 +15,7 @@ RUN apt-get install -y openssh-server
 RUN apt-get install -y vim
 
 # »·ºÝ°»¿ù¥Î
-#WORKDIR /
+WORKDIR /
 RUN mkdir /var/run/sshd
 RUN echo 'root:password' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
