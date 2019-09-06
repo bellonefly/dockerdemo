@@ -1,29 +1,20 @@
-# FrontStage.Web
+切換到 DockerDemo 目錄執行底下指令前後端就可以 Run 起來
+docker-compose up -d
 
-## Project setup
-```
-npm install
-```
+前端網址:
+http://127.0.0.1:8401 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+後端網址:
+http://127.0.0.1:8301
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+個別執行方式
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+前端:
+docker build --build-arg env=build -t dockerdemo_backstageweb -f FrontStage.Web/Dockerfile .
+docker run -d -p 8401:80 --name=dockerdemo_backstageweb_1 dockerdemo_backstageweb
+
+後端:
+docker build -t dockerdemo_backstageapi -f FrontStage.API/Dockerfile .
+docker run -d -p 8301:80 --env ASPNETCORE_ENVIRONMENT=Release --name=dockerdemo_backstageapi_1 dockerdemo_backstageapi

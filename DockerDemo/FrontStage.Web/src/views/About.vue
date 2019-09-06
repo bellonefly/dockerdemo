@@ -5,25 +5,25 @@
 </template>
 
 <script>
-import axios from "axios"
+import axios from 'axios'
 
 export default {
-  data () {
+  data() {
     return {
       name: ''
     }
   },
 
-  mounted () {
-    this.getName ().then(response => {
+  mounted() {
+    this.getName().then(response => {
       this.name = response.data
     })
   },
 
   methods: {
-    getName () {
+    getName() {
       return axios.get('http://127.0.0.1:8301/API/Member')
     }
-  }  
+  }
 }
 </script>
