@@ -15,12 +15,12 @@ RUN apt-get install -y openssh-server
 RUN apt-get install -y vim
 
 # »·ºÝ°»¿ù¥Î
-WORKDIR /
 RUN mkdir /var/run/sshd
 RUN echo 'root:password' | chpasswd
-RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-RUN service ssh restart
 RUN /usr/sbin/sshd
+RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN service ssh restart
 RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v vs2017u5 -l /root/.vs-debugger/
 
 # «Ø¸m
