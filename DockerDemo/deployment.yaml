@@ -31,4 +31,4 @@ spec:
         - name: dockerdemo-fs-web-container
           image: 10.10.101.22:28080/dockerdemo-fs-web
           ports:
-            - containerport: 80
+            - containerPort: 80
