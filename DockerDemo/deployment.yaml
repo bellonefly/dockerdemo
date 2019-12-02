@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dockerdemo_fs_api-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dockerdemo_fs_api
+    spec:
+      containers:
+        - name: dockerdemo_fs_api-container
+          image: 10.10.101.22:28080/dockerdemo_fs_api
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+---
+apiversion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dockerdemo_fs_web-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dockerdemo_fs_web
+    spec:
+      containers:
+        - name: dockerdemo_fs_web-container
+          image: 10.10.101.22:28080/dockerdemo_fs_web
+          ports:
+            - containerport: 80

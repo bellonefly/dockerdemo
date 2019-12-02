@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web
+spec:
+  rules:
+    - host: defsapi.demo.com
+      http:
+        paths:
+          - backend:
+              serviceName: dockerdemo_fs_api-service
+              servicePort: 80
+    - host: defsweb.demo.com
+      http:
+        paths:
+          - backend:
+              serviceName: dockerdemo_fs_web-service
+              servicePort: 80
