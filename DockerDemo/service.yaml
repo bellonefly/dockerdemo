@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dockerdemo_fs_api-service
+  name: dockerdemo-fs-api-service
 spec:
   type: NodePort
   selector:
-    app: dockerdemo_fs_api
+    app: dockerdemo-fs-api
   ports:
     - protocol: TCP
       port: 80
@@ -14,11 +14,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dockerdemo_fs_web-service
+  name: dockerdemo-fs-web-service
 spec:
   type: NodePort
   selector:
-    app: dockerdemo_fs_web
+    app: dockerdemo-fs-web
   ports:
     - protocol: TCP
       port: 80

@@ -8,11 +8,11 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: dockerdemo_fs_api-service
+              serviceName: dockerdemo-fs-api-service
               servicePort: 80
     - host: defsweb.demo.com
       http:
         paths:
           - backend:
-              serviceName: dockerdemo_fs_web-service
+              serviceName: dockerdemo-fs-web-service
               servicePort: 80
