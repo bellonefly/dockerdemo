@@ -11,8 +11,7 @@ spec:
       http:
         paths:
           - backend:
-              #serviceName: dockerdemo-fs-api-service
-              serviceName: backstageapi-service
+              serviceName: dockerdemo-fs-api-service
               servicePort: 80
     - host: defsweb.demo.com
       http:
