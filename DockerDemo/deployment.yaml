@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-fs-api-deployment
@@ -16,7 +16,7 @@ spec:
             - containerPort: 80
             - containerPort: 443
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-fs-web-deployment
