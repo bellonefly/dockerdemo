@@ -2,7 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-fs-api-deployment
+  namespace: dockerdemo
 spec:
+  selector:
+    matchLabels:
+      app: dockerdemo-fs-api
   replicas: 2
   template:
     metadata:
@@ -20,7 +24,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-fs-web-deployment
+  namespace: dockerdemo
 spec:
+  selector:
+    matchLabels:
+      app: dockerdemo-fs-web
   replicas: 2
   template:
     metadata:
