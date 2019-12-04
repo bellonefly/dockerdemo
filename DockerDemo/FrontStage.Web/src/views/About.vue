@@ -22,7 +22,7 @@ export default {
 
   methods: {
     getName() {
-      return axios.get('http://127.0.0.1:8301/API/Member')
+      return axios.get('http://defsapi.demo.com/API/Member')
     }
   }
 }
