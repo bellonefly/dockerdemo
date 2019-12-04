@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: dockerdemo-fs-api-container
-          image: 10.10.101.22:28080/dockerdemo_fs_api
+          image: 10.10.101.141:37002/dockerdemo_fs_api
           ports:
             - containerPort: 80
             - containerPort: 443
@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
         - name: dockerdemo-fs-web-container
-          image: 10.10.101.22:28080/dockerdemo_fs_web
+          image: 10.10.101.141:37002/dockerdemo_fs_web
           ports:
             - containerPort: 80
