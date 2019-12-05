@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <h1>My name is {{ name }}</h1>    
+    <h1>My name is {{ name }}</h1>
+    W
   </div>
 </template>
 

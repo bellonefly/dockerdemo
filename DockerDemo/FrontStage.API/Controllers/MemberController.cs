@@ -21,7 +21,7 @@ namespace FrontStage.API.Controllers
 
 		public string GetName()
 		{
-			return memberService.GetName(1) + " Q";
+			return memberService.GetName(1) + " Y";
 		}
     }
 }
