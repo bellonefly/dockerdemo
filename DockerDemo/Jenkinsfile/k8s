@@ -12,9 +12,10 @@ node('k8s') {
             //kubectl apply -f deployment.yaml --record
             sh """
                 cd /var/jenkins/workspace/dockerdemo_k8s/project/DockerDemo
+                kubectl apply -f namespace.yaml
                 kubectl apply -f deployment.yaml
-                kubectl set image deployment dockerdemo-fs-api-deployment dockerdemo-fs-api-container=10.10.101.141:37002/dockerdemo_fs_api:11  --record
-                kubectl set image deployment dockerdemo-fs-web-deployment dockerdemo-fs-web-container=10.10.101.141:37002/dockerdemo_fs_web:9 --record
+                kubectl set image deployment dockerdemo-fs-api-deployment dockerdemo-fs-api-container=10.10.101.141:37002/dockerdemo_fs_api:13  --record
+                kubectl set image deployment dockerdemo-fs-web-deployment dockerdemo-fs-web-container=10.10.101.141:37002/dockerdemo_fs_web:11 --record
                 kubectl apply -f service.yaml
                 kubectl apply -f ingress.yaml
             """
