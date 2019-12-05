@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: default-tcp-configmap
-data:
-  9000: "default/dockerdemo-redis-service:6379"

@@ -41,6 +41,12 @@ namespace FrontStage.API
 					policy.AllowAnyOrigin();
 				});
 			});
+
+			services.AddDistributedRedisCache(options =>
+			{
+				// Redis Server 的 IP 跟 Port
+				options.Configuration = "10.10.101.143:32003";
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
