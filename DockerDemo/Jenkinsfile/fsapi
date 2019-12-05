@@ -1,0 +1,26 @@
+node('jenkins') {  
+   stage('checkout_build'){ 
+        //透過 dir 在預測路徑下建立一個 project 資料夾 
+        dir('project'){
+            //透過 sh 對 linux 下指令
+            //sh 'rm -rf *'
+            retry(3){
+                git url: 'https://github.com/bellonefly/dockerdemo.git', branch: 'master'
+            }
+            //透過 sh 下 mvn build code 指令
+            //sh "mvn clean package -DskipTests=true"
+            sh """
+                cd /var/jenkins/workspace/dockerdemo_fs_api/project/DockerDemo
+                docker build -t dockerdemo_fs_api:$BUILD_NUMBER -f FrontStage.API/Dockerfile .
+                docker tag dockerdemo_fs_api:$BUILD_NUMBER 10.10.101.141:37002/dockerdemo_fs_api
+                docker tag dockerdemo_fs_api:$BUILD_NUMBER 10.10.101.141:37002/dockerdemo_fs_api:$BUILD_NUMBER
+                docker push 10.10.101.141:37002/dockerdemo_fs_api
+                docker push 10.10.101.141:37002/dockerdemo_fs_api:$BUILD_NUMBER
+                docker rmi -f dockerdemo_fs_api
+                docker rmi -f dockerdemo_fs_api:$BUILD_NUMBER
+                docker rmi -f 10.10.101.141:37002/dockerdemo_fs_api
+                docker rmi -f 10.10.101.141:37002/dockerdemo_fs_api:$BUILD_NUMBER
+            """
+        }
+    }
+}
