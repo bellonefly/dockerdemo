@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    HostName: {{hostName}}
+    <br /><br />
+    HostIP: {{hostIP}}
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import axios from 'axios'
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      hostName: '',
+      hostIP: ''
+    }
+  },
+
+  mounted() {
+    this.getInfo().then(response => {
+      this.hostName = response.data.HostName
+      this.hostIP = response.data.HostIP
+    })
+  },
+
+  methods: {
+    getInfo() {
+      return axios.get('http://defsapi.demo.com/API/Info')
+      // return axios.get('https://localhost:44318/API/Info')
+    }
   }
 }
 </script>
