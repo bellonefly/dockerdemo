@@ -24,4 +24,4 @@ spec:
         paths:
           - backend:
               serviceName: dockerdemo-redis-service
-              servicePort: 6379
+              servicePort: 80
