@@ -1,0 +1,23 @@
+node('k8s') {  
+   stage('checkout_build'){ 
+        //透過 dir 在預測路徑下建立一個 project 資料夾 
+        dir('project'){
+            //透過 sh 對 linux 下指令
+            //sh 'rm -rf *'
+            retry(3){
+                git url: 'https://github.com/bellonefly/dockerdemo.git', branch: 'master'
+            }
+            //透過 sh 下 mvn build code 指令
+            //sh "mvn clean package -DskipTests=true"
+            //kubectl apply -f deployment.yaml --record
+            sh """
+                cd /var/jenkins/workspace/dockerdemo_k8s/project/DockerDemo
+                kubectl apply -f deployment.yaml
+                kubectl set image deployment dockerdemo-fs-api-deployment dockerdemo-fs-api-container=10.10.101.141:37002/dockerdemo_fs_api:10  --record
+                kubectl set image deployment dockerdemo-fs-web-deployment dockerdemo-fs-web-container=10.10.101.141:37002/dockerdemo_fs_web:8 --record
+                kubectl apply -f service.yaml
+                kubectl apply -f ingress.yaml
+            """
+        }
+    }
+}
