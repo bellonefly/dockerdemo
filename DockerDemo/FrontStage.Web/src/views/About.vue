@@ -1,7 +1,6 @@
 <template>
   <div class="about">
-    <h1>My name is {{ name }}</h1>
-    <br />update
+    <h1>My name is {{ name }}</h1>    
   </div>
 </template>
 
