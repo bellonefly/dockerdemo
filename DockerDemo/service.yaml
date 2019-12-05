@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dockerdemo-fs-api-service
+  namespace: dockerdemo
 spec:
   type: NodePort
   selector:
@@ -16,6 +17,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dockerdemo-fs-web-service
+  namespace: dockerdemo
 spec:
   type: NodePort
   selector:
@@ -30,6 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dockerdemo-redis-service
+  namespace: dockerdemo
 spec:
   type: NodePort
   selector:
