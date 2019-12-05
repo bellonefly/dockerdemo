@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-fs-api-deployment
-  namespace: dockerdemo
+  #namespace: dockerdemo
 spec:
   selector:
     matchLabels:
@@ -25,7 +25,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-fs-web-deployment
-  namespace: dockerdemo
+  #namespace: dockerdemo
 spec:
   selector:
     matchLabels:
@@ -47,7 +47,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockerdemo-redis-deployment
-  namespace: dockerdemo
+  #namespace: dockerdemo
 spec:
   selector:
     matchLabels:
