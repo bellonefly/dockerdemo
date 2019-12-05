@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: dockerdemo-fs-api
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -29,7 +29,7 @@ spec:
   selector:
     matchLabels:
       app: dockerdemo-fs-web
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
