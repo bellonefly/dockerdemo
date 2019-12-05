@@ -16,6 +16,7 @@ spec:
       containers:
         - name: dockerdemo-fs-api-container
           image: 10.10.101.141:37002/dockerdemo_fs_api
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
             - containerPort: 443
@@ -38,6 +39,7 @@ spec:
       containers:
         - name: dockerdemo-fs-web-container
           image: 10.10.101.141:37002/dockerdemo_fs_web
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
@@ -59,6 +61,7 @@ spec:
       containers:
         - name: dockerdemo-redis-container
           image: redis:5.0.5
+          imagePullPolicy: Always
           ports:
             - containerPort: 6379
           env:
