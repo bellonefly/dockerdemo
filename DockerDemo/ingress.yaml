@@ -19,3 +19,9 @@ spec:
           - backend:
               serviceName: dockerdemo-fs-web-service
               servicePort: 80
+    - host: redis.demo.com
+      http:
+        paths:
+          - backend:
+              serviceName: dockerdemo-redis-service
+              servicePort: 6379

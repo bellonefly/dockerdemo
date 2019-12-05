@@ -40,3 +40,29 @@ spec:
           image: 10.10.101.141:37002/dockerdemo_fs_web
           ports:
             - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerdemo-redis-deployment
+  #namespace: dockerdemo
+spec:
+  selector:
+    matchLabels:
+      app: dockerdemo-redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dockerdemo-redis
+    spec:
+      containers:
+        - name: dockerdemo-redis-container
+          image: redis:5.0.5
+          ports:
+            - containerPort: 6379
+          env:
+          - name: REDIS_REPLICATION_MODE
+            value: master
+          - name: REDIS_PASSWORD
+            value: masterpassword
