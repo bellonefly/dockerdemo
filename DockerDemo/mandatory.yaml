@@ -249,6 +249,8 @@ spec:
               containerPort: 80
             - name: https
               containerPort: 443
+            - name: http8080
+              containerPort: 8080
           livenessProbe:
             failureThreshold: 3
             httpGet:
